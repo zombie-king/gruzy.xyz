@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gruzowisko">
+    <title>Gruzowisko</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- <h1>Witamy w Gruzowisku!</h1> -->
+            <!-- <nav>
+                <a href="#home">Strona główna</a>
+                <a href="#about">O nas</a>
+                <a href="#contact">Kontakt</a>
+            </nav> -->
+        </header>
+
+        <main>
+            <section id="home">
+                <h2>Witamy w Gruzowisku!</h2>
+                <p>Skupujemy wszystkie gruzy, z rudą czy bez.</p>
+                <!-- Centered Image -->
+                <div class="image-center">
+                    <img src="assets/images/IMG_0033.JPG" alt="Gruzowisko" class="main-image">
+                </div>
+            </section>
+            
+            <!--
+
+            <section id="about" class="mt-2">
+                <h2>O nas</h2>
+                <p>Dowiedz się więcej o tej aplikacji i jej funkcjach.</p>
+            </section>
+
+            <section id="contact" class="mt-2">
+                <h2>Kontakt</h2>
+                <p>Skontaktuj się z nami, aby uzyskać więcej informacji.</p>
+            </section> -->
+        </main>
+
+        <footer class="mt-2 text-center">
+            <p>&copy; 2025 Gruzowisko. Wszelkie prawa zastrzeżone.</p>
+            <img src="assets/images/Flying_Mouse_Deer_Club_logo.jpg" 
+                 alt="Klub Latającego Myszojelenia" 
+                 class="footer-logo clickable-logo" 
+                 onclick="showFullLogo()" 
+                 title="Klub Latającego Myszojelenia">
+        </footer>
+    </div>
+
+    <!-- Logo Modal Overlay -->
+    <div id="logoModal" class="modal-overlay" onclick="hideFullLogo()">
+        <div class="modal-content">
+            <img src="assets/images/Flying_Mouse_Deer_Club_logo.jpg" 
+                 alt="Flying Mouse Deer Club" 
+                 class="full-logo">
+            <!-- <p class="modal-text">Kliknij gdziekolwiek aby zamknąć</p> -->
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
