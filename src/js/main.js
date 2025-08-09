@@ -31,6 +31,7 @@ function setupEventListeners() {
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             hideFullLogo();
+            hideFullImage();
         }
     });
 }
@@ -46,6 +47,23 @@ function showFullLogo() {
 
 function hideFullLogo() {
     const modal = document.getElementById('logoModal');
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+}
+
+// Main image modal functions
+function showFullImage() {
+    const modal = document.getElementById('imageModal');
+    if (modal) {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+}
+
+function hideFullImage() {
+    const modal = document.getElementById('imageModal');
     if (modal) {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto'; // Restore scrolling
@@ -73,5 +91,5 @@ const utils = {
 
 // Export for use in other modules (if using modules)
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { utils, init, showFullLogo, hideFullLogo };
+    module.exports = { utils, init, showFullLogo, hideFullLogo, showFullImage, hideFullImage };
 }

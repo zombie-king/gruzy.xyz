@@ -29,7 +29,11 @@
                 <p>Skupujemy wszystkie gruzy, z rudą czy bez.</p>
                 <!-- Centered Image -->
                 <div class="image-center">
-                    <img src="assets/images/IMG_0033.JPG" alt="Gruzowisko" class="main-image">
+                    <img src="assets/images/IMG_0033.JPG" 
+                         alt="Gruzowisko" 
+                         class="main-image clickable-image" 
+                         onclick="showFullImage()" 
+                         title="Kliknij aby zobaczyć pełny rozmiar">
                 </div>
             </section>
             
@@ -63,6 +67,16 @@
                  alt="Flying Mouse Deer Club" 
                  class="full-logo">
             <!-- <p class="modal-text">Kliknij gdziekolwiek aby zamknąć</p> -->
+        </div>
+    </div>
+
+    <!-- Main Image Modal Overlay -->
+    <div id="imageModal" class="modal-overlay" onclick="hideFullImage()">
+        <div class="modal-content">
+            <img src="assets/images/IMG_0033.JPG" 
+                 alt="Gruzowisko - Pełny rozmiar" 
+                 class="full-image">
+            <p class="modal-text">Gruzowisko</p>
         </div>
     </div>
 
