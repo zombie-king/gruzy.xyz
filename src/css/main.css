@@ -10,7 +10,7 @@
 body {
     width: 100%;
     max-width: 35em;
-    margin: 0 auto;
+    margin: 1rem auto 0 auto;
     padding: 0 1rem;
     font-family: Tahoma, Verdana, Arial, sans-serif;
     line-height: 1.6;
