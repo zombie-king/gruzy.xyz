@@ -8,8 +8,10 @@
 }
 
 body {
-    width: 35em;
+    width: 100%;
+    max-width: 35em;
     margin: 0 auto;
+    padding: 0 1rem;
     font-family: Tahoma, Verdana, Arial, sans-serif;
     line-height: 1.6;
     color: #f5f3f0;
@@ -20,7 +22,18 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+    
+    body {
+        padding: 0 0.5rem;
+    }
 }
 
 /* Typography */
@@ -29,8 +42,24 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
+h2 {
+    font-size: 1.5rem;
+}
+
 p {
     margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+/* Mobile typography */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    p {
+        font-size: 0.95rem;
+    }
 }
 
 /* Logo styles */
@@ -64,6 +93,18 @@ p {
 .clickable-logo:hover {
     transform: scale(1.1);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile footer logo adjustments */
+@media (max-width: 768px) {
+    .footer-logo {
+        height: 25px;
+        margin-left: 6px;
+    }
+    
+    .clickable-logo:hover {
+        transform: scale(1.05);
+    }
 }
 
 /* Modal styles */
@@ -141,6 +182,14 @@ a:hover {
     text-decoration: none;
 }
 
+/* Mobile button adjustments */
+@media (max-width: 768px) {
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
 /* Utility classes */
 .text-center {
     text-align: center;
@@ -150,6 +199,13 @@ a:hover {
 .image-center {
     text-align: center;
     margin: 2rem 0;
+}
+
+/* Mobile image centering adjustments */
+@media (max-width: 768px) {
+    .image-center {
+        margin: 1.5rem 0;
+    }
 }
 
 .main-image {
@@ -170,7 +226,47 @@ a:hover {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Mobile image adjustments */
+@media (max-width: 768px) {
+    .main-image {
+        max-height: 300px;
+        border-radius: 6px;
+    }
+    
+    .clickable-image:hover {
+        transform: scale(1.02);
+    }
+}
+
 .mt-1 { margin-top: 1rem; }
 .mt-2 { margin-top: 2rem; }
 .mb-1 { margin-bottom: 1rem; }
 .mb-2 { margin-bottom: 2rem; }
+
+/* Mobile utility adjustments */
+@media (max-width: 768px) {
+    .mt-1 { margin-top: 0.75rem; }
+    .mt-2 { margin-top: 1.5rem; }
+    .mb-1 { margin-bottom: 0.75rem; }
+    .mb-2 { margin-bottom: 1.5rem; }
+}
+
+/* Mobile modal adjustments */
+@media (max-width: 768px) {
+    .full-logo {
+        max-width: 95vw;
+        max-height: 85vh;
+        border-radius: 6px;
+    }
+    
+    .full-image {
+        max-width: 98vw;
+        max-height: 90vh;
+        border-radius: 6px;
+    }
+    
+    .modal-text {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
+}
